@@ -1,0 +1,30 @@
+/* ======================================================
+   WxMark — 微信排版主题 CSS 变量
+   用于编辑器预览区的主题色指示，
+   实际微信渲染使用 JS 内联样式（见 themes.js）
+   ====================================================== */
+
+/* ---------- Theme Swatches（工具栏主题按钮背景色） ---------- */
+.theme-btn[data-theme="default"] {
+    background: linear-gradient(135deg, #4a90d9, #667eea);
+}
+
+.theme-btn[data-theme="green"] {
+    background: linear-gradient(135deg, #34d399, #059669);
+}
+
+.theme-btn[data-theme="pink"] {
+    background: linear-gradient(135deg, #f472b6, #db2777);
+}
+
+.theme-btn[data-theme="purple"] {
+    background: linear-gradient(135deg, #a78bfa, #7c3aed);
+}
+
+.theme-btn[data-theme="orange"] {
+    background: linear-gradient(135deg, #fb923c, #ea580c);
+}
+
+.theme-btn[data-theme="brown"] {
+    background: linear-gradient(135deg, #a8896c, #78604c);
+}

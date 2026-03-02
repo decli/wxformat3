@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WxMark — 专为微信公众号设计的 Markdown 排版工具。多主题切换、实时预览、一键复制，让你的公众号文章更精美。">
+  <meta name="keywords" content="微信公众号,Markdown,排版工具,WxMark,公众号编辑器">
+  <title>WxMark — 微信公众号 Markdown 排版工具</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- highlight.js Theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/atom-one-dark.min.css">
+
+  <!-- App Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/themes.css">
+</head>
+<body>
+
+<div class="app" id="app">
+
+  <!-- ======== Toolbar ======== -->
+  <header class="toolbar" id="toolbar">
+    <div class="toolbar-left">
+      <a href="#" class="logo">
+        <span class="logo-icon">M</span>
+        <span class="logo-text">WxMark</span>
+        <span class="logo-badge">Beta</span>
+      </a>
+    </div>
+
+    <div class="toolbar-center">
+      <span class="theme-label">主题</span>
+      <div class="theme-selector" id="theme-selector">
+        <!-- 主题按钮由 JS 动态生成 -->
+      </div>
+    </div>
+
+    <div class="toolbar-right">
+      <button class="btn" id="btn-sync" title="同步滚动">
+        <span class="btn-icon">🔗</span>
+        <span class="btn-text">同步滚动</span>
+      </button>
+      <button class="btn btn-primary" id="btn-copy" title="复制到微信公众号">
+        <span class="btn-icon">📋</span>
+        <span class="btn-text">复制到微信</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ======== Editor Area ======== -->
+  <main class="editor-area" id="editor-area">
+
+    <!-- Editor Pane -->
+    <div class="pane pane-editor" id="pane-editor">
+      <div class="pane-header">
+        <span class="pane-title">📝 Markdown</span>
+        <span class="pane-info" id="char-count">0 字符</span>
+      </div>
+
+      <!-- Quick Insert Toolbar -->
+      <div class="quick-insert" id="quick-insert">
+        <button class="quick-btn" data-action="bold" title="加粗"><b>B</b></button>
+        <button class="quick-btn" data-action="italic" title="斜体"><i>I</i></button>
+        <button class="quick-btn" data-action="strike" title="删除线"><s>S</s></button>
+        <span class="quick-divider"></span>
+        <button class="quick-btn" data-action="h1" title="一级标题">H1</button>
+        <button class="quick-btn" data-action="h2" title="二级标题">H2</button>
+        <button class="quick-btn" data-action="h3" title="三级标题">H3</button>
+        <span class="quick-divider"></span>
+        <button class="quick-btn" data-action="quote" title="引用">❝</button>
+        <button class="quick-btn" data-action="code" title="行内代码">⟨⟩</button>
+        <button class="quick-btn" data-action="codeblock" title="代码块">{ }</button>
+        <span class="quick-divider"></span>
+        <button class="quick-btn" data-action="ul" title="无序列表">•</button>
+        <button class="quick-btn" data-action="ol" title="有序列表">1.</button>
+        <button class="quick-btn" data-action="link" title="链接">🔗</button>
+        <button class="quick-btn" data-action="image" title="图片">🖼</button>
+        <button class="quick-btn" data-action="table" title="表格">▦</button>
+        <button class="quick-btn" data-action="hr" title="分割线">—</button>
+      </div>
+
+      <div class="editor-wrapper">
+        <textarea id="editor" placeholder="在这里输入 Markdown 内容..." spellcheck="false"></textarea>
+      </div>
+    </div>
+
+    <!-- Resize Handle -->
+    <div class="resize-handle" id="resize-handle"></div>
+
+    <!-- Preview Pane -->
+    <div class="pane pane-preview" id="pane-preview">
+      <div class="pane-header">
+        <span class="pane-title">👁️ 预览</span>
+        <span class="pane-info" id="line-count">0 行</span>
+      </div>
+      <div class="preview-wrapper" id="preview-wrapper">
+        <div id="preview"></div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ======== Footer Bar ======== -->
+  <footer class="footer-bar" id="footer-bar">
+    <div class="footer-left">
+      <span class="footer-item">
+        <span class="status-dot"></span>
+        <span>就绪</span>
+      </span>
+      <span class="footer-item">GFM</span>
+    </div>
+    <div class="footer-right">
+      <span class="footer-item">© 2026 WxMark</span>
+    </div>
+  </footer>
+
+</div>
+
+<!-- ======== Toast Container ======== -->
+<div class="toast-container" id="toast-container"></div>
+
+<!-- ======== Scripts ======== -->
+<!-- marked.js -->
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+<!-- highlight.js -->
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/highlight.min.js"></script>
+
+<!-- App Modules -->
+<script src="js/themes.js"></script>
+<script src="js/renderer.js"></script>
+<script src="js/editor.js"></script>
+<script src="js/sync-scroll.js"></script>
+<script src="js/copy.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
