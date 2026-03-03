@@ -248,9 +248,18 @@ class MarkdownRenderer {
             el.setAttribute('style', styles.img);
         });
 
-        // 处理分割线
+        // 处理分割线 — Studio 主题使用 hrReplacement（真实 <p> 元素），确保微信居中正确
         container.querySelectorAll('hr').forEach(el => {
-            el.setAttribute('style', styles.hr);
+            if (styles.hrReplacement) {
+                const temp = document.createElement('div');
+                temp.innerHTML = styles.hrReplacement;
+                const replacement = temp.firstElementChild;
+                if (replacement) {
+                    el.parentNode.replaceChild(replacement, el);
+                }
+            } else {
+                el.setAttribute('style', styles.hr);
+            }
         });
 
         // 处理表格

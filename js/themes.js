@@ -280,8 +280,9 @@ function generateStudioStyles(primary, accent) {
     // 图片
     img: `max-width: 100%; height: auto; border-radius: 12px; margin: 16px 0; display: block; box-shadow: 0 4px 20px rgba(${primaryRgb}, 0.15);`,
 
-    // ★ 分割线: 三点装饰 (使用背景渐变模拟)
-    hr: `border: none; height: 20px; background: none; margin: 28px auto; max-width: 200px; text-align: center; background-image: radial-gradient(circle, ${primary} 3px, transparent 3px), radial-gradient(circle, ${accent} 3px, transparent 3px), radial-gradient(circle, ${primary} 3px, transparent 3px); background-size: 8px 8px; background-position: center left, center, center right; background-repeat: no-repeat;`,
+    // ★ 分割线: 三点文字装饰 — 用真实 <p> 替换 <hr>，text-align:center 在微信中稳定居中
+    hr: `border: none; height: 0; margin: 0;`,
+    hrReplacement: `<p style="text-align: center; margin: 28px 0; font-size: 22px; line-height: 1; color: ${primary}; letter-spacing: 0.6em; padding-left: 0.6em;">···</p>`,
 
     // ★ 表格: 渐变头部 + 大圆角
     table: `width: 100%; border-collapse: separate; border-spacing: 0; margin: 18px 0; font-size: 16px; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 12px rgba(${primaryRgb}, 0.1);`,
