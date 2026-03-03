@@ -13,7 +13,7 @@ const THEMES = {
       // 标题
       h1: 'font-size: 24px; font-weight: bold; color: #1a73e8; border-bottom: 2px solid #1a73e8; padding-bottom: 8px; margin: 30px 0 15px 0; line-height: 1.4;',
       h2: 'font-size: 21px; font-weight: bold; color: #1a73e8; border-left: 4px solid #1a73e8; padding-left: 12px; margin: 28px 0 14px 0; line-height: 1.4;',
-      h3: 'font-size: 19px; font-weight: bold; color: #333333; margin: 24px 0 12px 0; line-height: 1.4;',
+      h3: 'font-size: 19px; font-weight: bold; color: #1565c0; background: rgba(26,115,232,0.1); padding: 7px 14px; border-radius: 6px; margin: 24px 0 12px 0; line-height: 1.4; display: block;',
       h4: 'font-size: 18px; font-weight: bold; color: #555555; margin: 20px 0 10px 0; line-height: 1.4;',
       // 段落
       p: 'margin: 12px 0; color: #333333; font-size: 17px; line-height: 1.8;',
@@ -24,7 +24,7 @@ const THEMES = {
       // 链接
       a: 'color: #1a73e8; text-decoration: none; border-bottom: 1px solid #1a73e8;',
       // 引用
-      blockquote: 'border-left: 4px solid #1a73e8; background: #f0f7ff; padding: 12px 16px; margin: 16px 0; color: #555555; font-size: 16px; line-height: 1.75; border-radius: 0 4px 4px 0;',
+      blockquote: 'border-left: 4px solid #1a73e8; background: #f0f7ff; padding: 12px 16px; margin: 16px 0; color: #555555; font-size: 16px; line-height: 1.75; border-radius: 0 6px 6px 0; font-style: italic;',
       // 列表
       ul: 'margin: 12px 0; padding-left: 28px; color: #333333; font-size: 17px; line-height: 1.8;',
       ol: 'margin: 12px 0; padding-left: 28px; color: #333333; font-size: 17px; line-height: 1.8;',
@@ -54,14 +54,14 @@ const THEMES = {
       wrapper: 'color: #2d3436; font-size: 17px; line-height: 1.8; word-break: break-word; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;',
       h1: 'font-size: 24px; font-weight: bold; color: #059669; border-bottom: 2px solid #059669; padding-bottom: 8px; margin: 30px 0 15px 0; line-height: 1.4;',
       h2: 'font-size: 21px; font-weight: bold; color: #059669; border-left: 4px solid #059669; padding-left: 12px; margin: 28px 0 14px 0; line-height: 1.4;',
-      h3: 'font-size: 19px; font-weight: bold; color: #2d3436; margin: 24px 0 12px 0; line-height: 1.4;',
+      h3: 'font-size: 19px; font-weight: bold; color: #065f46; background: rgba(5,150,105,0.1); padding: 7px 14px; border-radius: 6px; margin: 24px 0 12px 0; line-height: 1.4; display: block;',
       h4: 'font-size: 18px; font-weight: bold; color: #555555; margin: 20px 0 10px 0; line-height: 1.4;',
       p: 'margin: 12px 0; color: #2d3436; font-size: 17px; line-height: 1.8;',
       strong: 'font-weight: bold; color: #059669; background: rgba(5,150,105,0.08); padding: 2px 6px; border-radius: 4px;',
       em: 'font-style: italic; color: #555555;',
       del: 'text-decoration: line-through; color: #999999;',
       a: 'color: #059669; text-decoration: none; border-bottom: 1px solid #059669;',
-      blockquote: 'border-left: 4px solid #34d399; background: #ecfdf5; padding: 12px 16px; margin: 16px 0; color: #555555; font-size: 16px; line-height: 1.75; border-radius: 0 4px 4px 0;',
+      blockquote: 'border-left: 4px solid #34d399; background: #ecfdf5; padding: 12px 16px; margin: 16px 0; color: #555555; font-size: 16px; line-height: 1.75; border-radius: 0 6px 6px 0; font-style: italic;',
       ul: 'margin: 12px 0; padding-left: 28px; color: #2d3436; font-size: 17px; line-height: 1.8;',
       ol: 'margin: 12px 0; padding-left: 28px; color: #2d3436; font-size: 17px; line-height: 1.8;',
       li: 'margin: 4px 0; color: #2d3436; font-size: 17px; line-height: 1.8;',
@@ -84,14 +84,14 @@ const THEMES = {
       wrapper: 'color: #333333; font-size: 17px; line-height: 1.8; word-break: break-word; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;',
       h1: 'font-size: 24px; font-weight: bold; color: #db2777; border-bottom: 2px solid #f472b6; padding-bottom: 8px; margin: 30px 0 15px 0; line-height: 1.4;',
       h2: 'font-size: 21px; font-weight: bold; color: #db2777; border-left: 4px solid #f472b6; padding-left: 12px; margin: 28px 0 14px 0; line-height: 1.4;',
-      h3: 'font-size: 19px; font-weight: bold; color: #333333; margin: 24px 0 12px 0; line-height: 1.4;',
+      h3: 'font-size: 19px; font-weight: bold; color: #9d174d; background: rgba(219,39,119,0.1); padding: 7px 14px; border-radius: 6px; margin: 24px 0 12px 0; line-height: 1.4; display: block;',
       h4: 'font-size: 18px; font-weight: bold; color: #555555; margin: 20px 0 10px 0; line-height: 1.4;',
       p: 'margin: 12px 0; color: #333333; font-size: 17px; line-height: 1.8;',
       strong: 'font-weight: bold; color: #db2777; background: rgba(219,39,119,0.08); padding: 2px 6px; border-radius: 4px;',
       em: 'font-style: italic; color: #777777;',
       del: 'text-decoration: line-through; color: #999999;',
       a: 'color: #db2777; text-decoration: none; border-bottom: 1px solid #f472b6;',
-      blockquote: 'border-left: 4px solid #f472b6; background: #fdf2f8; padding: 12px 16px; margin: 16px 0; color: #555555; font-size: 16px; line-height: 1.75; border-radius: 0 4px 4px 0;',
+      blockquote: 'border-left: 4px solid #f472b6; background: #fdf2f8; padding: 12px 16px; margin: 16px 0; color: #555555; font-size: 16px; line-height: 1.75; border-radius: 0 6px 6px 0; font-style: italic;',
       ul: 'margin: 12px 0; padding-left: 28px; color: #333333; font-size: 17px; line-height: 1.8;',
       ol: 'margin: 12px 0; padding-left: 28px; color: #333333; font-size: 17px; line-height: 1.8;',
       li: 'margin: 4px 0; color: #333333; font-size: 17px; line-height: 1.8;',
@@ -114,14 +114,14 @@ const THEMES = {
       wrapper: 'color: #333333; font-size: 17px; line-height: 1.8; word-break: break-word; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;',
       h1: 'font-size: 24px; font-weight: bold; color: #7c3aed; border-bottom: 2px solid #a78bfa; padding-bottom: 8px; margin: 30px 0 15px 0; line-height: 1.4;',
       h2: 'font-size: 21px; font-weight: bold; color: #7c3aed; border-left: 4px solid #a78bfa; padding-left: 12px; margin: 28px 0 14px 0; line-height: 1.4;',
-      h3: 'font-size: 19px; font-weight: bold; color: #333333; margin: 24px 0 12px 0; line-height: 1.4;',
+      h3: 'font-size: 19px; font-weight: bold; color: #4c1d95; background: rgba(124,58,237,0.1); padding: 7px 14px; border-radius: 6px; margin: 24px 0 12px 0; line-height: 1.4; display: block;',
       h4: 'font-size: 18px; font-weight: bold; color: #555555; margin: 20px 0 10px 0; line-height: 1.4;',
       p: 'margin: 12px 0; color: #333333; font-size: 17px; line-height: 1.8;',
       strong: 'font-weight: bold; color: #7c3aed; background: rgba(124,58,237,0.08); padding: 2px 6px; border-radius: 4px;',
       em: 'font-style: italic; color: #777777;',
       del: 'text-decoration: line-through; color: #999999;',
       a: 'color: #7c3aed; text-decoration: none; border-bottom: 1px solid #a78bfa;',
-      blockquote: 'border-left: 4px solid #a78bfa; background: #f5f3ff; padding: 12px 16px; margin: 16px 0; color: #555555; font-size: 16px; line-height: 1.75; border-radius: 0 4px 4px 0;',
+      blockquote: 'border-left: 4px solid #a78bfa; background: #f5f3ff; padding: 12px 16px; margin: 16px 0; color: #555555; font-size: 16px; line-height: 1.75; border-radius: 0 6px 6px 0; font-style: italic;',
       ul: 'margin: 12px 0; padding-left: 28px; color: #333333; font-size: 17px; line-height: 1.8;',
       ol: 'margin: 12px 0; padding-left: 28px; color: #333333; font-size: 17px; line-height: 1.8;',
       li: 'margin: 4px 0; color: #333333; font-size: 17px; line-height: 1.8;',
@@ -144,14 +144,14 @@ const THEMES = {
       wrapper: 'color: #333333; font-size: 17px; line-height: 1.8; word-break: break-word; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;',
       h1: 'font-size: 24px; font-weight: bold; color: #ea580c; border-bottom: 2px solid #fb923c; padding-bottom: 8px; margin: 30px 0 15px 0; line-height: 1.4;',
       h2: 'font-size: 21px; font-weight: bold; color: #ea580c; border-left: 4px solid #fb923c; padding-left: 12px; margin: 28px 0 14px 0; line-height: 1.4;',
-      h3: 'font-size: 19px; font-weight: bold; color: #333333; margin: 24px 0 12px 0; line-height: 1.4;',
+      h3: 'font-size: 19px; font-weight: bold; color: #9a3412; background: rgba(234,88,12,0.1); padding: 7px 14px; border-radius: 6px; margin: 24px 0 12px 0; line-height: 1.4; display: block;',
       h4: 'font-size: 18px; font-weight: bold; color: #555555; margin: 20px 0 10px 0; line-height: 1.4;',
       p: 'margin: 12px 0; color: #333333; font-size: 17px; line-height: 1.8;',
       strong: 'font-weight: bold; color: #ea580c; background: rgba(234,88,12,0.08); padding: 2px 6px; border-radius: 4px;',
       em: 'font-style: italic; color: #777777;',
       del: 'text-decoration: line-through; color: #999999;',
       a: 'color: #ea580c; text-decoration: none; border-bottom: 1px solid #fb923c;',
-      blockquote: 'border-left: 4px solid #fb923c; background: #fff7ed; padding: 12px 16px; margin: 16px 0; color: #555555; font-size: 16px; line-height: 1.75; border-radius: 0 4px 4px 0;',
+      blockquote: 'border-left: 4px solid #fb923c; background: #fff7ed; padding: 12px 16px; margin: 16px 0; color: #555555; font-size: 16px; line-height: 1.75; border-radius: 0 6px 6px 0; font-style: italic;',
       ul: 'margin: 12px 0; padding-left: 28px; color: #333333; font-size: 17px; line-height: 1.8;',
       ol: 'margin: 12px 0; padding-left: 28px; color: #333333; font-size: 17px; line-height: 1.8;',
       li: 'margin: 4px 0; color: #333333; font-size: 17px; line-height: 1.8;',
@@ -174,14 +174,14 @@ const THEMES = {
       wrapper: 'color: #3c3028; font-size: 17px; line-height: 1.8; word-break: break-word; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;',
       h1: 'font-size: 24px; font-weight: bold; color: #78604c; border-bottom: 2px solid #a8896c; padding-bottom: 8px; margin: 30px 0 15px 0; line-height: 1.4;',
       h2: 'font-size: 21px; font-weight: bold; color: #78604c; border-left: 4px solid #a8896c; padding-left: 12px; margin: 28px 0 14px 0; line-height: 1.4;',
-      h3: 'font-size: 19px; font-weight: bold; color: #3c3028; margin: 24px 0 12px 0; line-height: 1.4;',
+      h3: 'font-size: 19px; font-weight: bold; color: #4a3728; background: rgba(120,96,76,0.12); padding: 7px 14px; border-radius: 6px; margin: 24px 0 12px 0; line-height: 1.4; display: block;',
       h4: 'font-size: 18px; font-weight: bold; color: #5a4a3c; margin: 20px 0 10px 0; line-height: 1.4;',
       p: 'margin: 12px 0; color: #3c3028; font-size: 17px; line-height: 1.8;',
       strong: 'font-weight: bold; color: #78604c; background: rgba(120,96,76,0.08); padding: 2px 6px; border-radius: 4px;',
       em: 'font-style: italic; color: #777777;',
       del: 'text-decoration: line-through; color: #999999;',
       a: 'color: #78604c; text-decoration: none; border-bottom: 1px solid #a8896c;',
-      blockquote: 'border-left: 4px solid #a8896c; background: #faf6f1; padding: 12px 16px; margin: 16px 0; color: #5a4a3c; font-size: 16px; line-height: 1.75; border-radius: 0 4px 4px 0;',
+      blockquote: 'border-left: 4px solid #a8896c; background: #faf6f1; padding: 12px 16px; margin: 16px 0; color: #5a4a3c; font-size: 16px; line-height: 1.75; border-radius: 0 6px 6px 0; font-style: italic;',
       ul: 'margin: 12px 0; padding-left: 28px; color: #3c3028; font-size: 17px; line-height: 1.8;',
       ol: 'margin: 12px 0; padding-left: 28px; color: #3c3028; font-size: 17px; line-height: 1.8;',
       li: 'margin: 4px 0; color: #3c3028; font-size: 17px; line-height: 1.8;',
@@ -242,8 +242,8 @@ function generateStudioStyles(primary, accent) {
     // ★ H2: 居中 + 渐变底部装饰线
     h2: `font-size: 21px; font-weight: 700; color: ${primary}; text-align: center; margin: 28px 0 14px 0; line-height: 1.4; padding-bottom: 10px; border-bottom: 3px solid transparent; background-image: linear-gradient(#fff, #fff), linear-gradient(90deg, ${primary}, ${accent}); background-origin: padding-box, border-box; background-clip: padding-box, border-box; border-bottom: 3px solid ${primary}; background: none; border-bottom: 3px solid transparent; border-image: linear-gradient(90deg, ${primary}, ${accent}) 1;`,
 
-    // ★ H3: 左侧渐变圆点装饰
-    h3: `font-size: 19px; font-weight: 700; color: #2c3e50; margin: 24px 0 12px 0; line-height: 1.4; padding-left: 18px; position: relative; border-left: 4px solid transparent; border-image: linear-gradient(180deg, ${primary}, ${accent}) 1;`,
+    // ★ H3: 渐变背景色章节标签（区分于引用的左边框风格）
+    h3: `font-size: 19px; font-weight: 700; color: ${primary}; background: linear-gradient(135deg, rgba(${primaryRgb}, 0.12), rgba(${accentRgb}, 0.06)); padding: 8px 16px; border-radius: 8px; margin: 24px 0 12px 0; line-height: 1.4; display: block;`,
 
     // H4
     h4: `font-size: 18px; font-weight: 600; color: ${primary}; margin: 20px 0 10px 0; line-height: 1.4; font-style: italic;`,
@@ -263,8 +263,8 @@ function generateStudioStyles(primary, accent) {
     // ★ 链接: 渐变色 + 装饰下划线
     a: `color: ${primary}; text-decoration: none; border-bottom: 2px solid rgba(${accentRgb}, 0.4); font-weight: 500;`,
 
-    // ★ 引用: 大圆角 + 渐变左边框 + 半透明背景（玻璃态）
-    blockquote: `border-left: 4px solid transparent; border-image: linear-gradient(180deg, ${primary}, ${accent}) 1; background: linear-gradient(135deg, rgba(${primaryRgb}, 0.06), rgba(${accentRgb}, 0.06)); padding: 16px 20px; margin: 18px 0; color: #555; font-size: 16px; line-height: 1.8; border-radius: 0 12px 12px 0; box-shadow: 0 2px 12px rgba(${primaryRgb}, 0.08);`,
+    // ★ 引用: 大圆角 + 渐变左边框 + 半透明背景（玻璃态）+ 斜体强化区分
+    blockquote: `border-left: 5px solid ${primary}; background: linear-gradient(135deg, rgba(${primaryRgb}, 0.05), rgba(${accentRgb}, 0.03)); padding: 16px 20px; margin: 18px 0; color: #555; font-size: 16px; line-height: 1.8; border-radius: 0 12px 12px 0; box-shadow: 0 2px 12px rgba(${primaryRgb}, 0.08); font-style: italic;`,
 
     // 列表
     ul: 'margin: 14px 0; padding-left: 28px; color: #2c3e50; font-size: 17px; line-height: 1.9;',
