@@ -28,3 +28,31 @@
 .theme-btn[data-theme="brown"] {
     background: linear-gradient(135deg, #a8896c, #78604c);
 }
+
+.theme-btn[data-theme="custom"] {
+    background: linear-gradient(135deg, #6366f1, #06b6d4);
+    position: relative;
+}
+
+.theme-btn[data-theme="custom"]::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, #6366f1, #06b6d4, #6366f1);
+    background-size: 200% 200%;
+    animation: studio-glow 3s ease infinite;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.theme-btn[data-theme="custom"]:hover::before,
+.theme-btn[data-theme="custom"].active::before {
+    opacity: 1;
+}
+
+@keyframes studio-glow {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
