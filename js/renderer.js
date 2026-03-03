@@ -226,6 +226,13 @@ class MarkdownRenderer {
                         span.setAttribute('style', `color: ${color};`);
                     }
                 });
+
+                // ★ 将普通空格替换为不间断空格，防止微信压缩空格
+                const walker = document.createTreeWalker(code, NodeFilter.SHOW_TEXT);
+                let textNode;
+                while (textNode = walker.nextNode()) {
+                    textNode.textContent = textNode.textContent.replace(/ /g, '\u00A0');
+                }
             }
         });
 
